@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Conecta+ - Sistema simples para solicitação e acompanhamento de serviços."
+    >
+
+    <title>Conecta+ | Sistema de Serviços</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <a href="#inicio" class="logo">
+            <span>+</span>
+            Conecta+
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#solicitacao">Solicitações</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <button
+            type="button"
+            class="btn-login"
+            onclick="alert('Área de login em desenvolvimento.')"
+        >
+            Entrar
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-text">
+
+                <span class="tag">
+                    SIMPLES • RÁPIDO • EFICIENTE
+                </span>
+
+                <h1>
+                    Encontre soluções
+                    <strong>de forma simples.</strong>
+                </h1>
+
+                <p>
+                    O Conecta+ facilita o acesso a serviços e permite
+                    acompanhar suas solicitações de maneira rápida,
+                    organizada e transparente.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#solicitacao"
+                        class="btn-primary"
+                    >
+                        Fazer uma solicitação
+                    </a>
+
+                    <a
+                        href="#servicos"
+                        class="btn-secondary"
+                    >
+                        Conhecer serviços
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD DO HERO -->
+            <div class="hero-card">
+
+                <div class="card-icon">
+                    ✓
+                </div>
+
+                <h2>
+                    Solicitação rápida
+                </h2>
+
+                <p>
+                    Registre sua necessidade e acompanhe
+                    o andamento em um só lugar.
+                </p>
+
+                <div
+                    class="progress"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="70"
+                >
+                    <div class="progress-bar"></div>
+                </div>
+
+                <small>
+                    Solicitação em andamento
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVIÇOS -->
+        <section class="services" id="servicos">
+
+            <div class="section-title">
+
+                <span>
+                    O QUE OFERECEMOS
+                </span>
+
+                <h2>
+                    Principais serviços
+                </h2>
+
+                <p>
+                    Escolha uma opção para encontrar a solução
+                    que você precisa.
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+                <!-- CARD 1 -->
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Nova solicitação
+                    </h3>
+
+                    <p>
+                        Cadastre uma nova solicitação de serviço
+                        de maneira rápida e prática.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="abrirSolicitacao('nova')"
+                    >
+                        Solicitar
+                    </button>
+
+                </article>
+
+
+                <!-- CARD 2 -->
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Acompanhar pedido
+                    </h3>
+
+                    <p>
+                        Consulte o status e veja as atualizações
+                        da sua solicitação.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="acompanharPedido()"
+                    >
+                        Acompanhar
+                    </button>
+
+                </article>
+
+
+                <!-- CARD 3 -->
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        Suporte
+                    </h3>
+
+                    <p>
+                        Entre em contato para tirar dúvidas
+                        ou receber ajuda.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="abrirSolicitacao('suporte')"
+                    >
+                        Falar com suporte
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOLICITAÇÃO -->
+        <section
+            class="request-section"
+            id="solicitacao"
+        >
+
+            <div class="request-info">
+
+                <span>
+                    PRECISA DE AJUDA?
+                </span>
+
+                <h2>
+                    Faça sua solicitação
+                </h2>
+
+                <p>
+                    Preencha o formulário ao lado com as informações
+                    necessárias. Nossa equipe poderá analisar sua
+                    solicitação e atualizar o status posteriormente.
+                </p>
+
+                <ul>
+                    <li>Processo simples</li>
+                    <li>Acompanhamento da solicitação</li>
+                    <li>Informações organizadas</li>
+                </ul>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+            <form
+                class="form"
+                id="formSolicitacao"
+            >
+
+                <label for="nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    autocomplete="name"
+                    required
+                >
+
+
+                <label for="email">
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email"
+                    required
+                >
+
+
+                <label for="servico">
+                    Tipo de serviço
+                </label>
+
+                <select
+                    id="servico"
+                    name="servico"
+                    required
+                >
+                    <option value="">
+                        Selecione uma opção
+                    </option>
+
+                    <option value="nova">
+                        Nova solicitação
+                    </option>
+
+                    <option value="suporte">
+                        Suporte
+                    </option>
+
+                    <option value="informacao">
+                        Informação
+                    </option>
+
+                    <option value="outro">
+                        Outro
+                    </option>
+                </select>
+
+
+                <label for="mensagem">
+                    Descrição
+                </label>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    placeholder="Descreva sua necessidade..."
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn-submit"
+                >
+                    Enviar solicitação
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SOBRE -->
+        <section
+            class="about"
+            id="sobre"
+        >
+
+            <div>
+
+                <span>
+                    SOBRE O SISTEMA
+                </span>
+
+                <h2>
+                    Uma solução pensada para facilitar seu dia.
+                </h2>
+
+            </div>
+
+            <p>
+                O Conecta+ foi desenvolvido para tornar o processo
+                de solicitação e acompanhamento de serviços mais
+                organizado, acessível e intuitivo.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <a href="#inicio" class="logo">
+            <span>+</span>
+            Conecta+
+        </a>
+
+        <p>
+            © 2026 Conecta+. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function abrirSolicitacao(tipo) {
+
+            const secao = document.getElementById("solicitacao");
+            const select = document.getElementById("servico");
+
+            secao.scrollIntoView({
+                behavior: "smooth"
+            });
+
+            setTimeout(function () {
+
+                if (tipo === "nova") {
+                    select.value = "nova";
+                }
+
+                if (tipo === "suporte") {
+                    select.value = "suporte";
+                }
+
+            }, 500);
+        }
+
+
+        function acompanharPedido() {
+
+            alert(
+                "A área de acompanhamento estará disponível em breve."
+            );
+
+        }
+
+
+        function limparFormulario() {
+
+            document
+                .getElementById("formSolicitacao")
+                .reset();
+
+        }
+
+
+        document
+            .getElementById("formSolicitacao")
+            .addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                const nome =
+                    document
+                        .getElementById("nome")
+                        .value
+                        .trim();
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+                const servico =
+                    document
+                        .getElementById("servico")
+                        .value;
+
+                const mensagem =
+                    document
+                        .getElementById("mensagem")
+                        .value
+                        .trim();
+
+
+                if (!nome || !email || !servico || !mensagem) {
+
+                    alert(
+                        "Preencha todos os campos antes de enviar."
+                    );
+
+                    return;
+                }
+
+
+                alert(
+                    "Solicitação enviada com sucesso!\n\n" +
+                    "Nome: " + nome + "\n" +
+                    "E-mail: " + email
+                );
+
+
+                limparFormulario();
+
+            });
+
+    </script>
+
+</body>
+
+</html>
